@@ -1,8 +1,8 @@
 import axios from "axios";
 
-let location = 33065;
 
 export default function getForecast(req, res) {
+    let location = req.params.location;
   axios
     .get(
       `http://api.weatherapi.com/v1/forecast.json?key=${process.env.KEY}&q=${location}&days=3&aqi=yes&alerts=yes`

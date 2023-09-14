@@ -9,11 +9,16 @@ import getAstro from "./controller/getAstro.js";
 const app = express();
 const PORT = 3000;
 
-app.get("/", getWeather)
+app.get("/", (req, res) => {
+  res.send("Welcome to the Weather API!");
+});
 
-app.get("/forecast", getForecast)
+app.get("/current/:location", getWeather)
 
-app.get("/astro", getAstro)
+app.get("/forecast/:location", getForecast)
+
+
+app.get("/astro/:location", getAstro)
 
 
 app.listen(PORT, ()=> {
