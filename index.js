@@ -7,7 +7,7 @@ import getForecast from "./controller/getForecast.js";
 import getAstro from "./controller/getAstro.js";
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 app.get("/", (req, res) => {
   res.send("Welcome to the Weather API!");
