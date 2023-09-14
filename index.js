@@ -17,9 +17,7 @@ app.get("/current/:location", getWeather)
 
 app.get("/forecast/:location", getForecast)
 
-
 app.get("/astro/:location", getAstro)
-
 
 app.listen(PORT, ()=> {
     console.log(`Server is running on http://localhost:${PORT}`)
