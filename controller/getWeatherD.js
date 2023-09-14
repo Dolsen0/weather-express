@@ -2,10 +2,6 @@ import axios from 'axios';
 
 
 export default function getWeatherD(req, res) {
-
-    let url = `http://api.weatherapi.com/v1/current.json?key=${process.env.KEY}&q=33065&aqi=no`;
-    console.log('URL:', url);
-
     
     axios.get(`http://api.weatherapi.com/v1/current.json?key=${process.env.KEY}&q=33065&aqi=no`)
     .then(response => {

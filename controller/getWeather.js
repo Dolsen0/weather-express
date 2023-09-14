@@ -3,10 +3,6 @@ import axios from 'axios';
 
 export default function getWeather(req, res) {
     let location = req.params.location
-
-    let url = `http://api.weatherapi.com/v1/current.json?key=${process.env.KEY}&q=${location}&aqi=no`;
-    console.log('URL:', url);
-
     
     axios.get(`http://api.weatherapi.com/v1/current.json?key=${process.env.KEY}&q=${location}&aqi=no`)
     .then(response => {
